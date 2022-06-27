@@ -1,4 +1,5 @@
 // function system
+
 function updateCaseNumber(isIncreasing) {
     const caseInput = document.getElementById('case-number');
     let caseNumber = caseInput.value;
@@ -9,14 +10,30 @@ function updateCaseNumber(isIncreasing) {
         caseNumber = parseInt(caseNumber) - 1;
     }
     caseInput.value = caseNumber;
-
-
     // update case-total
 
     const caseTotal = document.getElementById('case-total');
     caseTotal.innerText = caseNumber * 59;
 
 }
+// phone increase decress event
+
+
+
+document.getElementById('phone-plus').addEventListener('click', function () {
+
+    // 3.52 video
+
+
+    console.log('uh')
+})
+
+
+
+
+
+// handle case increase decrease events
+
 document.getElementById('case-plus').addEventListener('click', function () {
     updateCaseNumber(true);
 });
@@ -41,6 +58,4 @@ document.getElementById('case-minus').addEventListener('click', function () {
     caseminusInput.value = parseInt(caseminusNumber) - 1;
 });
  */
-
-
 

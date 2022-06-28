@@ -37,8 +37,14 @@ function calculateTotal() {
     const caseTotal = getInputValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;
 
+    const tax = subTotal / 10;
+    const totalPrice = subTotal + tax;
+
     // update on the  html
     document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = tax;
+    document.getElementById('total-price').innerText = totalPrice;
+
 
 }
 
@@ -117,6 +123,7 @@ document.getElementById('case-minus').addEventListener('click', function () {
 
 
 // normal system 
+
 /* document.getElementById('case-plus').addEventListener('click', function () {
     const caseInput = document.getElementById('case-number');
     const caseNumber = caseInput.value;
